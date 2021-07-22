@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial;
+  font-size: 17px;
+  padding: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  margin: 0 -16px;
+}
+
+.col-25 {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+}
+
+.col-50 {
+  -ms-flex: 50%; /* IE10 */
+  flex: 50%;
+}
+
+.col-75 {
+  -ms-flex: 75%; /* IE10 */
+  flex: 75%;
+}
+
+.col-25,
+.col-50,
+.col-75 {
+  padding: 0 16px;
+}
+
+.container {
+  background-color: #f2f2f2;
+  padding: 5px 20px 15px 20px;
+  border: 1px solid lightgrey;
+  border-radius: 3px;
+}
+
+input[type=text] {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.icon-container {
+  margin-bottom: 20px;
+  padding: 7px 0;
+  font-size: 24px;
+}
+
+.btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.btn:hover {
+  background-color: #45a049;
+}
+
+a {
+  color: #2196F3;
+}
+
+hr {
+  border: 1px solid lightgrey;
+}
+
+span.price {
+  float: right;
+  color: grey;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  .col-25 {
+    margin-bottom: 20px;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Checkout</h2>
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Billing Address</h3>
+            <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <label for="email"><i class="fa fa-envelope"></i> Email</label>
+            <input type="text" id="email" name="email" placeholder="john@example.com">
+            <h3>Payment</h3>
+            <h5>Send $400 BTC (don't include transaction fee in this amount)</h5>
+            <h5>If you send any other amount of bitcoin the payment system will ignore it </h5>
+
+<input type="text" value="1BpH6NHQJaDLuM6WkRX3cWhfcWXwckSFLV" id="myInput">
+<button onclick="myFunction()">Copy Wallet ID</button>
+
+<script>
+function myFunction() {
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+          
+       
+            <button class="buttonload">
+  <i class="fa fa-refresh fa-spin"></i>Waiting for payment 
+</button>
+<img src="https://i.ibb.co/JtyWqqC/20210719-225338.jpg" width="200" 
+     height="200" >
+
+
+            <div class="row">
+              <div class="col-50">
+                
+              </div>
+              <div class="col-50">
+                
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Payment Method</h3>
+            <label for="fname"> BITCOIN</label>
+            <div class="icon-container">
+                
+<i class="fa fa-bitcoin" style="font-<isize:48px;color:red"></i>              
+            </div>
+            
+            <div class="row">
+              <div class="col-50">
+                
+              </div>
+              <div class="col-50">
+                
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" unchecked="checked" name="sameadr"> Verify that payment has been transfer and every information provided is accurate.
+        </label>
+        <input type="button" onclick="alert('Comfirmation...')" value="Click here to verify payment" class="btn" >
+      </form>
+    </div>
+  </div>
+  <div class="col-25">
+    <div class="container">
+      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>1</b></span></h4>
+      <p><a href="#">Forex Rockstar Silver Member</a> <span class="price">$400</span></p>
+
+      <hr>
+      <p>Total <span class="price" style="color:black"><b>$400</b></span></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
